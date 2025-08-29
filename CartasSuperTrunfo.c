@@ -1,4 +1,4 @@
-//SuperTrunfo v1
+//SuperTrunfo v2
 #include <stdio.h>
 
 int main() { 
@@ -10,6 +10,8 @@ int main() {
     float area1, area2;                       // Área
     float pib1, pib2;                         // PIB
     int turisticos1, turisticos2;             // Pontos turísticos
+    float densidade1, densidade2;             // Densisade populacional
+    float pibpc1, pibpc2;                     // Pib per capta
 
     //le os dados da primeira carta
     printf("Insira os dados da Primeira carta:\n");
@@ -59,6 +61,13 @@ int main() {
     printf("Número de pontos turísticos: ");
     scanf(" %d", &turisticos2);
 
+    //calculo de densidade populacional = população dividido pela area
+    densidade1 = populacao1/area1;
+    densidade2 = populacao2/area2;
+    //calculo pib per capta = pib dividido pela populacao
+    pibpc1 =  pib1/populacao1;
+    pibpc2 =  pib2/populacao2;
+    
     // Exibe os dados da carta 1
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
@@ -68,7 +77,8 @@ int main() {
     printf("Área: %.1f km²\n", area1);
     printf("PIB: %.1f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", turisticos1);
-
+    printf("Densidade Populacional: %.2f\n", densidade1);
+    printf("Pib per Capta: %.2f\n", pibpc1);
      // Exibe os dados da carta 2
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
@@ -78,6 +88,7 @@ int main() {
     printf("Área: %.1f km²\n", area2);
     printf("PIB: %.1f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", turisticos2);
-    
+    printf("Densidade Populacional: %.2f\n", densidade2);
+    printf("Pib per Capta: %.2f\n", pibpc2);    
     return 0;
 }
