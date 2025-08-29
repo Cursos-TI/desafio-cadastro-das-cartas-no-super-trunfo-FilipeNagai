@@ -1,4 +1,4 @@
-//SuperTrunfo v2
+//SuperTrunfo v1
 #include <stdio.h>
 
 int main() { 
